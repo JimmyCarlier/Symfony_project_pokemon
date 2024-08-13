@@ -1,0 +1,19 @@
+#nav-bar{
+    background-color:#e0742c;
+    height: 50px;
+    ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        a {
+            text-decoration: none;
+            color: #f1b56f;
+            font-weight: bold;
+            &:hover {
+                color : white;
+            }
+        }
+    }
+}

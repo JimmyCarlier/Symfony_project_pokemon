@@ -1,0 +1,57 @@
+@font-face{
+    font-family: 'IBM_Plex_Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/poppins/Poppins-ExtraBold.ttf');
+}
+body {
+    height: 99vh;
+    background-color: #fceed1;
+}
+h1 {
+    font-family:"IBM_Plex_Sans";
+    display: flex;
+    justify-content: center;
+    color: #f2d53c;
+}
+
+#container-connection{
+    width: 25%;
+    margin: 12% auto;
+    #container-form-login{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid #7d3cff;
+        padding: 25px;
+        width: 100%;
+        div {
+            display: flex;
+            flex-direction: column;
+            label {
+                margin-bottom: 5px;
+                font-family:"IBM_Plex_Sans";
+            }
+            input {
+                padding: 5px;
+                border: none;
+            }
+        }
+        #btn-login-submit{
+            margin: 0 auto;
+            width: 150px;
+            padding: 10px 15px;
+            text-align: center;
+            background-color: #c80e13;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family:"IBM_Plex_Sans";
+            &:hover {
+                background-color: black;
+                color : #0a58ca;
+            }
+        }
+    }
+}

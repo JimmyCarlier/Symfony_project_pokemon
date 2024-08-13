@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    #banniere-header{
+        background-image: url(../../assets/img/bannierepokemon.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+    }
+}

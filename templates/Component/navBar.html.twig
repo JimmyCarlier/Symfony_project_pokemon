@@ -1,0 +1,14 @@
+{% block header %}
+    <nav id="nav-bar">
+        <ul>
+            <li><a href="{{ path('app_home') }}">Accueil</a></li>
+            {% if user %}
+                <li><a href="{{ path('pokemon_list', {'username': user.username}) }}">Mes pokemons</a></li>
+                <li>{{ user.username }}</li>
+            {% else %}
+                <li><a href="{{ path('app_login') }}">Se connecter</a></li>
+            {% endif %}
+            <li><a href="/logout">Déconnexion</a></li>
+        </ul>
+    </nav>
+{% endblock %}

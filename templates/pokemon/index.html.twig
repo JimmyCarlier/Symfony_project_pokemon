@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pokemon's list{% endblock %}
+{% block body %}
+    {{ include('Component/navBar.html.twig', {user : user}) }}
+    <div id="banniere-header">
+        <h1 id="title-list-pokemon">Pokemon's list <span style='font-size:100px;'>&#129395;</span></h1>
+    </div>
+    <p>{{ pokemon.getNomPokemon }}</p>
+    <p>{{ pokemon.getHp }}</p>
+    <p>{{ pokemon.getAtk }}</p>
+    <p>{{ pokemon.getDef }}</p>
+        {% for loc in pokemon.getLocation %}
+            <p>{{ loc }}</p>
+        {% endfor %}
+    <p>{{ pokemon.getPokemonRarity }}</p>
+    <p>{{ pokemon.getPokemonElement1 }}</p>
+    <p>{{ pokemon.getPokemonElement2 }}</p>
+{% endblock %}

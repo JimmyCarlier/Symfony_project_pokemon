@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ include('Component/navBar.html.twig', {user : user}) }}
+    <h1>My Pokemon's</h1>
+    <main class="main-container">
+        <a href="{{ path('add_pokemon') }}" id="ajout-pokemon">Ajouter un pokemon</a>
+        {% for pokemon in pokemons %}
+            <div class="container-pokemonList">
+                <a href="{{ path('app_pokemon', {'id' : pokemon.id}) }}">{{ pokemon.getNomPokemon }}</a>
+                <div>
+                    <a href="{{ path('delete_pokemon', { 'id': pokemon.id }) }}" class="btn-list" id="btn-delete">Supprimer</a>
+                    <a href="{{ path('update_pokemon', { 'id': pokemon.id }) }}" class="btn-list" id="btn-update">Modifier</a>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+    {% if(showFormCreate) %}
+        <article id="main-container-form-update">
+            <div id="container-form-update">
+                <a href="{{ path('pokemon_list', { 'username' : name }) }}" id="close-form-update">X</a>
+                {{ form(form) }}
+            </div>
+        </article>
+    {% endif %}
+{% endblock %}

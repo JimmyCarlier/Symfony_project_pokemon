@@ -1,0 +1,9 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page d'accueil{% endblock %}
+{% block header %}
+{% endblock %}
+{% block body %}
+    {{ include('Component/navBar.html.twig', {user: user}) }}
+    <h1>Accueil</h1>
+{% endblock %}
