@@ -39,7 +39,6 @@ class PokemonController extends AbstractController
             'pokemons' => $user->getPokemon(),
             'name' => $user->getUsername(),
             'user' => $user
-
         ]);
 
     }

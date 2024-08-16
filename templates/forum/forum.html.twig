@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ include('Component/navBar.html.twig', {user : user}) }}
+
+    <a href="{{ path('app_addForum') }}">Créer un forum</a>
+    <ul>
+        {% for forum in forums %}
+            <li><a href="{{ path('app_specificForum', {"id": forum.getId()}) }}">{{ forum.getTitreForum() }}</a></li>
+            <li>{{ forum.getUsername() }}</li>
+            <li>{{ forum.numberOfCommentaire() }}</li>
+        {% endfor %}
+    </ul>
+    {% if showForm %}
+        {{ form(formForum) }}
+    {% endif %}
+{% endblock %}

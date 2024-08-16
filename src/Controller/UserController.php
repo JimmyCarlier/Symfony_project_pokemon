@@ -32,7 +32,7 @@ class UserController extends AbstractController
             $entityManager->persist($user);
             $entityManager->flush();
 
-            return $this->redirectToRoute("pokemon_list");
+            return $this->redirectToRoute("pokemon_list",['username'=>$user->getUsername()]);
 
         }
 

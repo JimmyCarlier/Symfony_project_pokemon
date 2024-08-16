@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+{% block body  %}
+    {{ include('Component/navBar.html.twig', {user : user}) }}
+    <h1>{{ forum.getTitreForum }}</h1>
+    <p>Écris par : {{ forum.getUsername }}</p>
+
+    {% for commentaire in commentaires %}
+        <div>
+            <p>{{ commentaire.getUser.getUsername }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
